@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">TheftGuard</string>
+
+    <!-- Strings used by the DeviceAdminReceiver -->
+    <string name="admin_receiver_status">Device Admin: %1$s</string>
+    <string name="admin_receiver_status_enabled">Admin enabled</string>
+    <string name="admin_receiver_status_disabled">Admin disabled</string>
+    <string name="admin_receiver_status_pw_changed">pw changed</string>
+    <string name="admin_receiver_status_pw_failed">pw failed</string>
+    <string name="admin_receiver_status_pw_succeeded">pw succeeded</string>
+    <string name="admin_receiver_status_disable_warning">
+        This is an optional message to warn the user about disabling.</string>
+    <string name="device_admin_explanation">
+        A password monitoring app. For experimentation purposes only</string>
+    <string name="checkboxText">Enable Device Admin</string>
+    <string name="location_status">Location Status</string>
+    <string name="location_permission_disabled">Location permission disabled</string>
 </resources>

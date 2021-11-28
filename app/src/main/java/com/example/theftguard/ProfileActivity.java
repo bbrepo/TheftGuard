@@ -23,7 +23,7 @@ public class ProfileActivity extends AppCompatActivity{
     private FirebaseUser user;
     public DatabaseReference reference;
     private String userID;
-    private Button logout, btnMyEvents, btnAddEvents, btnAllEvents, btnJoinedEvents;
+    private Button logout, btnSetup, btnView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +31,28 @@ public class ProfileActivity extends AppCompatActivity{
         setContentView(R.layout.activity_profile);
 
         logout=(Button) findViewById(R.id.signOut);
+        btnSetup=(Button) findViewById(R.id.btnSetup);
+        btnView=(Button) findViewById(R.id.btnView);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(ProfileActivity.this,MainActivity.class));
+            }
+        });
+
+        btnSetup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this,SetupActivity.class));
+            }
+        });
+
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this,AllActivity.class));
             }
         });
 
