@@ -62,12 +62,12 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
                         .create();
 
                 View myview=dialogPlus.getHolderView();
-                final TextView purl=myview.findViewById(R.id.uimgurl);
+                final ImageView imgl=myview.findViewById(R.id.uimage);
                 final TextView ula=myview.findViewById(R.id.ula);
                 final TextView ulo=myview.findViewById(R.id.ulo);
                 final TextView utime=myview.findViewById(R.id.utime);
 
-                purl.setText("Image URL: "+model.getPurl());
+                Glide.with(imgl.getContext()).load(model.getPurl()).into(imgl);
                 ula.setText("Latitude: "+model.getLatitude());
                 ulo.setText("Longitude: "+model.getLongitude());
                 utime.setText("Time: "+model.getTime());
